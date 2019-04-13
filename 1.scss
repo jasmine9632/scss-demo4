@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@function px($npx) {
+    @return $npx/375*100vw;
+}
+
+.icons {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4%;
+    >.icon {
+        border: 1px solid green;
+        width: px(69); //页面宽度的20%，用vw,这样页面能动态缩放
+        height: px(69); //页面宽度的20%，用vw,这样页面能动态缩放
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        flex-shrink: 0;
+    }
+}
